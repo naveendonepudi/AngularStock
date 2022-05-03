@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Quote } from 'src/app/stock-module/models/quote';
+import { Quote } from '../../stock-module/models/quote';
 
 @Injectable({
   providedIn: 'root'

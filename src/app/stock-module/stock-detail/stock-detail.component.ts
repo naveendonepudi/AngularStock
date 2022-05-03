@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { LocalStorageHandlerService } from 'src/app/shared-module/services/local-storage-handler.service';
+import { LocalStorageHandlerService } from '../../shared-module/services/local-storage-handler.service';
 import { Quote } from '../models/quote';
 
 @Component({

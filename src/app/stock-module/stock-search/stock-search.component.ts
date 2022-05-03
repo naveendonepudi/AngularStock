@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { zip } from 'rxjs/internal/observable/zip';
-import { LocalStorageHandlerService } from 'src/app/shared-module/services/local-storage-handler.service';
+import { LocalStorageHandlerService } from '../../shared-module/services/local-storage-handler.service';
 import { Quote } from '../models/quote';
 import { StockService } from '../services/stock.service';
 
