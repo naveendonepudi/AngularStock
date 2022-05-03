@@ -1,0 +1,9 @@
+<app-stock-search (updateQuotes)="updatedQuoteDetails($event)"></app-stock-search>
+
+<div>
+    <ul>
+        <li *ngFor='let stock of stocks'>
+            <app-stock-detail [stock]="stock" (updateQuotes)="updatedQuoteDetails($event)"></app-stock-detail>
+        </li>
+      </ul>
+</div>

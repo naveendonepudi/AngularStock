@@ -1,0 +1,28 @@
+<mat-card class="example-card">
+    <button mat-raised-button id="x" (click)="removeStockFromList()">
+        X
+    </button>
+    <div>
+        <div>
+            <h3>{{ stock.StockName }} ( {{ stock.Symbol }})</h3>
+            <div>
+                Change : {{ stock.Change }} &nbsp;&nbsp;&nbsp;
+                Opening Price : {{ stock.OpenPriceOfTheDay }}
+            </div>
+            <div>
+                Current Price : {{ stock.CurrentPrice }} &nbsp;&nbsp;&nbsp;
+                Change : {{ stock.HighPriceOfTheDay }}
+            </div>
+        </div>
+        <span *ngIf="stock.Change < 0">
+            <img [src]="imgDownArrowPath" />
+        </span>
+        <span *ngIf="stock.Change > 0">
+            <img [src]="imgUpArrowPath" />
+        </span>
+    </div>
+    <br />
+    <div>
+        <button mat-raised-button [routerLink]="['/sentiment', stock.Symbol]">Go to social sentiment details ></button>
+    </div>
+</mat-card>

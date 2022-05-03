@@ -1,0 +1,11 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    <div>
+        <label for="stockSymbol">Enter the symbol of a stock to track (i.e. AAPL, TSLA, GOOGL)</label>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" id="stockSymbol" formControlName="stockSymbol"
+            placeholder="Enter stock symbol" minlength="1" maxlength="5" (keypress)="blockSpecialChar($event)">
+    </div>
+    <button type="submit" mat-button class="btn primary">Track Stock</button>
+</form>
+<app-spinner-overlay *ngIf="isLoading" messageTextTranslated="Loading..."></app-spinner-overlay>
